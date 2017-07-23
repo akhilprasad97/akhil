@@ -1,0 +1,13 @@
+
+
+{% block content %} 
+<h3>You are uploading for the {{image}} Image</h3>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+<a href='logout'> Logout</a>
+
+  
+{% endblock %}
